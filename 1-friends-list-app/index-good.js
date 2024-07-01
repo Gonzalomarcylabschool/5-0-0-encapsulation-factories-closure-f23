@@ -13,7 +13,7 @@ const renderFriendsList = (friends) => {
 
 // A factory function
 const makeFriendsManager = () => {
-  const friends = ['ahmad', 'brandon', 'carmen'];
+  const friends = ['Andy', 'Cindy', 'Patrick'];
 
   // Because we create new functions, a closure is created and
   // addFriend and getFriends "remember" their environment after 

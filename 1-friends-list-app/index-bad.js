@@ -26,7 +26,7 @@ Test it out:
 - Use the form to add another friend
 */
 const friendsManager = {
-  friends: ['ahmad', 'brandon', 'carmen'],
+  friends: ['Andy', 'Cindy', 'Patrick'],
   addFriend(newFriend) {
     this.friends.push(newFriend);
   }
