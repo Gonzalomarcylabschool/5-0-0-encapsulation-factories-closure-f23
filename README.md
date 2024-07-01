@@ -29,14 +29,14 @@ In functional programming, we separate data from the functions that act on them.
 
 ```js
 // Functional Programming separates data from functionality
-const friends = ['ahmad', 'brandon', 'carmen'];
+const friends = ['Andy', 'Cindy', 'Patrick'];
 
 const addFriend = (friends, newFriend) => {
   if (typeof newFriend !== 'string') return friends;
   return [...friends, newFriend]; // keep it pure, make a new list
 }
 
-const newFriends = addFriend(friends, 'daniel');
+const newFriends = addFriend(friends, 'Lauren');
 ```
 
 In OOP, we store data in objects and give those objects methods to manipulate their own data. This is called **encapsulation**.
@@ -51,9 +51,9 @@ const friendsManager = {
   }
 }
 
-friendsManager.addFriend('ahmad');
-friendsManager.addFriend('brandon');
-friendsManager.addFriend('carmen');
+friendsManager.addFriend('Andy');
+friendsManager.addFriend('Cindy');
+friendsManager.addFriend('Patrick');
 // Here, friendsManager invokes addFriend so this === friendsManager
 
 console.log(friendsManager.friends)
@@ -86,7 +86,7 @@ const friendsManager = {
 }
 
 // What about this is NOT consistent or predictable?
-friendsManager.addFriend('daniel');
+friendsManager.addFriend('Laurenz');
 friendsManager.addFriend(true);
 friendsManager.friends.push('emmaneul');
 friendsManager.friends.push(42);
@@ -143,10 +143,10 @@ bensFriendsManager.addFriend('zo')
 bensFriendsManager.addFriend('motun')
 
 const gonzalosFriendsManager = makeFriendsManager();
-gonzalosFriendsManager.addFriend('carmen');
+gonzalosFriendsManager.addFriend('Patrick');
 
 console.log(bensFriendsManager.getFriends()) // ['zo', 'motun']
-console.log(gonzalosFriendsManager.getFriends()) // ['carmen']
+console.log(gonzalosFriendsManager.getFriends()) // ['Patrick']
 ```
 
 The cool thing about closures is that each time we invoke this function, we will create a new `friends` array and a new object with methods that reference that specific **instance** of the friends array.
@@ -174,7 +174,7 @@ The cool thing about closures is that each time we invoke this function, we will
 >   }
 >   return friendsManager;
 > }
-> const myFriendsManager = makeFriendsManager('ahmad', 'brandon', 'carmen');
+> const myFriendsManager = makeFriendsManager('Andy', 'brandon', 'Patrick');
 > ```
 
 </details><br>
@@ -301,9 +301,9 @@ const makeFriendsManager = (...initialFriends) => {
 
 const bensFriendsManager = makeFriendsManager('zo', 'motun');
 const gonzalosFriendsManager = makeFriendsManager();
-gonzalosFriendsManager.addFriend('carmen');
+gonzalosFriendsManager.addFriend('Patrick');
 
 // each instance will maintain its own list of friends
 console.log(bensFriendsManager.getFriends()) // ['zo', 'motun']
-console.log(gonzalosFriendsManager.getFriends()) // ['carmen']
+console.log(gonzalosFriendsManager.getFriends()) // ['Patrick']
 ```
