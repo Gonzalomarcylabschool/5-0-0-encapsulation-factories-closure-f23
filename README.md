@@ -1,5 +1,6 @@
 # Closures
 
+[Lecture Video](https://us02web.zoom.us/rec/share/bMSL1U--7ff_q3KkF7sdYac2bDL42IzwKSbHKNscj2l7fyMEzjAmx1dSJp429b4i.o3AYovnQQuU7wneZ)
 
 - [Intro to Mod 5: Object-Oriented Programming (OOP) — 5 minutes](#intro-to-mod-5-object-oriented-programming-oop--5-minutes)
 - [Encapsulation — 15 minutes](#encapsulation--15-minutes)
